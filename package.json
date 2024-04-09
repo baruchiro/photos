@@ -9,6 +9,7 @@
     "node": ">=18"
   },
   "scripts": {
+    "start": "ts-node src/index.ts",
     "lint": "eslint src --ext .ts && stylelint --allow-empty-input **/*.css",
     "lint:fix": "eslint src --ext .ts --fix && stylelint --allow-empty-input --fix **/*.css",
     "lint:lockfile": "lockfile-lint --path yarn.lock --allowed-hosts npm yarn --validate-https --validate-package-names --validate-integrity --empty-hostname false",
@@ -17,8 +18,12 @@
     "typecheck": "tsc --noEmit",
     "prepare": "husky install"
   },
+  "dependencies": {
+    "googleapis": "^134.0.0"
+  },
   "devDependencies": {
     "@jamesacarr/eslint-formatter-github-actions": "^0.2.0",
+    "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.8.0",
@@ -33,6 +38,7 @@
     "prettier": "3.0.0",
     "stylelint": "^15.10.2",
     "stylelint-config-standard": "^34.0.0",
+    "ts-node": "^10.9.2",
     "typescript": "*"
   },
   "lint-staged": {
